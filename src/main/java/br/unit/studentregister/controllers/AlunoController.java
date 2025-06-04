@@ -18,17 +18,11 @@ public class AlunoController {
   }
 
   public List<AlunoModel> loadingStudentList() {
-    List<AlunoModel> students = alunoDAO.listStudents();
-
-    for (AlunoModel student : students) {
-      alunoView.adicionarAlunoNaTabela(student);
-    }
-
-    return students;
+    return alunoDAO.listStudents();
   }
 
   public void addStudent(AlunoModel student) {
     alunoDAO.saveAluno(student);
-    alunoView.adicionarAlunoNaTabela(student);
+    alunoView.atualizarTabela();
   }
 }
