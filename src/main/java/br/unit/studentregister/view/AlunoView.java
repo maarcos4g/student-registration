@@ -12,6 +12,7 @@ import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -83,15 +84,16 @@ public class AlunoView extends JFrame {
   private void openForm() {
     JTextField nameField = new JTextField();
     JTextField emailField = new JTextField();
-    JTextField coursField = new JTextField();
     JTextField registrationField = new JTextField();
     JTextField birthDateField = new JTextField();
-    // JTextField ageField = new JTextField();
+    JComboBox<String> courseCombo = new JComboBox<>(new String[] {
+        "Engenharia", "Direito", "Medicina", "Administração", "Arquitetura", "Psicologia", "Ciência da Computação"
+    });
 
     Object[] message = {
         "Nome:", nameField,
         "Email:", emailField,
-        "Curso:", coursField,
+        "Curso:", courseCombo,
         "Matrícula:", registrationField,
         "Data de Nascimento:", birthDateField,
     };
@@ -104,7 +106,7 @@ public class AlunoView extends JFrame {
       AlunoModel student = new AlunoModel(
           nameField.getText(),
           emailField.getText(),
-          coursField.getText(),
+          (String) courseCombo.getSelectedItem(),
           registrationField.getText(),
           birthDate);
       controller.addStudent(student);

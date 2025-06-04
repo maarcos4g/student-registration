@@ -1,2 +1,4 @@
 Marcos;marcospaullo552@gmail.com;Ciência da Computação;1212121212;25/01/2005
 Taina dos Santos;taina@souunit.com.br;Psicologia;121212344443;03/10/2002
+Alexandre Matos;alexandre.pedro@souunit.com.br;Engenharia;1232109294;12/12/1999
+Teste;teste;Ciência da Computação;1212;24/12/2000
